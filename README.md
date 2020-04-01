@@ -96,15 +96,7 @@ See the README's in [client](client/README.md) and [api](api/README.md) for more
       $ npm install
       ```
 
-   2. Add the a Google Maps API KEY to [MapContainer.js](client/src/components/MapContainer.js#L248):
-
-      ```javascript
-      export default GoogleApiWrapper({
-         apiKey: ("ENTER_GOOGLE_API_KEY")
-      })(MapContainer)
-      ```
-
-   3. Pick an [API](api) project and follow the instructions of the README within the API project root.
+   2. Pick an [API](api) project and follow the instructions of the README within the API project root.
 
 ## Support and Contribution <a name="support-contribution"></a>
 
