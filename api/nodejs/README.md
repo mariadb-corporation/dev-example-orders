@@ -38,10 +38,10 @@ var mariadb = require('mariadb');
 require('dotenv').config();
 
 const pool = mariadb.createPool({
-    host: process.env.DB_HOST, 
-    user: process.env.DB_USER, 
-    password: process.env.DB_PASS,
-    port: process.env.DB_PORT,
+    host: process.env.DB_HOST_1, 
+    user: process.env.DB_USER_1, 
+    password: process.env.DB_PASS_1,
+    port: process.env.DB_PORT_1,
     multipleStatements: true,
     connectionLimit: 5
 });

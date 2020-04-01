@@ -17,7 +17,8 @@ The following will walk you through the steps for getting this application up an
 2. [Getting Started](#get-started)
     1. [Get the code](#code)
     2. [Create the schema](#schema)
-    3. [Build and run the app](#app)
+    3. [Anatomy of the app](#app)
+    4. [Build and run the app](#build-run)
 2. [Requirements to run the app](#requirements)
 3. [Support and Contribution](#support-contribution)
 4. [License](#license)
@@ -43,6 +44,8 @@ To download and deploy MariaDB check out the instructions [here](https://mariadb
 </p>
 
 ## Get started <a name="get-started"></a>
+
+In order to run the Orders application you will need to have a MariaDB instance to connect to. For more information please check out "[Get Started with MariaDB](https://mariadb.com/get-started-with-mariadb/)".
 
 ### Get the code <a name="code"></a>
 
@@ -70,7 +73,7 @@ CREATE TABLE orders.orders (
 ) ENGINE=InnoDB;
 ```
 
-### Build and run the app <a name="app"></a>
+### Anatomy of the app <a name="app"></a>
 
 This application is made of two parts:
 
@@ -83,13 +86,25 @@ This application is made of two parts:
         - [Node.js](api/nodejs)
         - Python (coming soon!)
 
-**IMPORTANT**: Nagivate to the [client](client) folder and execute the following CLI command before proceeding:
-
-```
-$ npm install
-```
-
 See the README's in [client](client/README.md) and [api](api/README.md) for more information on how to get started!
+
+### Build and run the app <a name="build-run"></a>
+
+   1. Nagivate to the [client](client) folder and execute the following CLI command before proceeding:
+
+      ```
+      $ npm install
+      ```
+
+   2. Add the a Google Maps API KEY to [MapContainer.js](client/src/components/MapContainer.js#L248):
+
+      ```javascript
+      export default GoogleApiWrapper({
+         apiKey: ("ENTER_GOOGLE_API_KEY")
+      })(MapContainer)
+      ```
+
+   3. Pick an [API](api) project and follow the instructions of the README within the API project root.
 
 ## Support and Contribution <a name="support-contribution"></a>
 
