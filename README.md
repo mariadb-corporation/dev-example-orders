@@ -14,13 +14,13 @@ The following will walk you through the steps for getting this application up an
 1. [Introduction to MariaDB](#overview)
     1. [MariaDB Platform](#platform)
     2. [MariaDB SkySQL](#skysql)
-2. [Getting Started](#get-started)
+2. [Getting started](#get-started)
     1. [Get the code](#code)
     2. [Create the schema](#schema)
     3. [Anatomy of the app](#app)
     4. [Build and run the app](#build-run)
 2. [Requirements to run the app](#requirements)
-3. [Support and Contribution](#support-contribution)
+3. [Support and contribution](#support-contribution)
 4. [License](#license)
 
 ## Overview <a name="overview"></a>
@@ -28,6 +28,12 @@ The following will walk you through the steps for getting this application up an
 ### MariaDB Platform <a name="platform"></a>
 
 [MariaDB Platform](https://mariadb.com/products/mariadb-platform/) integrates the former [MariaDB TX (transactions)](https://mariadb.com/products/mariadb-platform-transactional/) and [MariaDB AX (analytics)](https://mariadb.com/products/mariadb-platform-analytical/) products so developers can build modern applications by enriching transactions with real-time analytics and historical data, creating insightful experiences and compelling opportunities for customers – and for businesses, endless ways to monetize data. It’s the only enterprise open source database built for modern applications running in the cloud.
+
+<p align="center" spacing="10">
+    <kbd>
+        <img src="media/platform.png" />
+    </kbd>
+</p>
 
 To download and deploy MariaDB check out the instructions [here](https://mariadb.com/docs/deploy/installation/). You can also make use of the [MariaDB image available on Docker Hub](https://hub.docker.com/_/mariadb).
 
@@ -90,13 +96,19 @@ See the README's in [client](client/README.md) and [api](api/README.md) for more
 
 ### Build and run the app <a name="build-run"></a>
 
-   1. Nagivate to the [client](client) folder and execute the following CLI command before proceeding:
+1. Navigate to the [client](client) folder and execute the following CLI command to install the package dependencies for the React.js application.
 
-      ```
-      $ npm install
-      ```
+```bash
+$ npm install
+```
 
-   2. Pick an [API](api) project and follow the instructions of the README within the API project root.
+2. Pick an [API](api) project and follow the instructions of the README to build and run the API project.
+
+3. Navigate to the [client](client) folder and execute the following CLI command to start the React.js application.
+
+```bash 
+$ npm start
+``` 
 
 ## Support and Contribution <a name="support-contribution"></a>
 

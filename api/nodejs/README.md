@@ -22,11 +22,11 @@ Configure the MariaDB connection by [adding an .env file to the Node.js project]
 Example implementation:
 
 ```
-DB_HOST=<host_address>
-DB_PORT=<port_number>
-DB_USER=<username>
-DB_PASS=<password>
-DB_NAME=<database>
+DB_HOST_1=<host_address>
+DB_PORT_1=<port_number>
+DB_USER_1=<username>
+DB_PASS_1=<password>
+DB_NAME_1=<database>
 ```
 
 **Configuring db.js**
@@ -42,6 +42,7 @@ const pool = mariadb.createPool({
     user: process.env.DB_USER_1, 
     password: process.env.DB_PASS_1,
     port: process.env.DB_PORT_1,
+    database: process.env.DB_NAME_1,
     multipleStatements: true,
     connectionLimit: 5
 });
@@ -59,7 +60,7 @@ require('dotenv').config();
 const fs = require("fs");
 
 // 2.) Retrieve the Certificate Authority chain file (wherever you placed it - notice it's just in the Node project root here)
-const serverCert = [fs.readFileSync("skysql_chain_t.pem", "utf8")];
+const serverCert = [fs.readFileSync("skysql_chain.pem", "utf8")];
 
 var pools = [
   mariadb.createPool({
@@ -106,4 +107,12 @@ Once you've pulled down the code and have verified that all of the required Node
 $ npm start
 ```
 
-2. Open a browser window and navigate to http://localhost:3000.
+The following steps also exist within the ["Build and run"](../../#build-and-run-the-app-) section of the root README, and are for startin the React.js project once this API project has been started.
+
+2. Navigate to the [../../client](client) folder and execute the following CLI command to start the React.js application.
+
+```bash 
+$ npm start
+```
+
+3. Open a browser window and navigate to http://localhost:3000.

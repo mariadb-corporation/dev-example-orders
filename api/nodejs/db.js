@@ -17,8 +17,7 @@ var pools = [
     database: process.env.DB_NAME_1,
     multipleStatements: true,
     connectionLimit: 5
-    /*
-    ,ssl: {
+    /*,ssl: {
       ca: serverCert
     }*/
   })
