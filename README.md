@@ -8,22 +8,31 @@
     </kbd>
 </p>
 
-The following will walk you through the steps for getting this application up and running within minutes! This application is completely open source. Please feel free to use it and the source code as you see fit.
+This README will walk you through the steps for getting the Orders web application up and running using MariaDB. To ensure success, please follow the instructions in order.
+
+**Note:** The code provided within this repository is completely open source. Please feel free to use it as you see fit.
 
 # Table of Contents
-1. [Introduction to MariaDB](#overview)
+1. [Requirements](#requirements)
+2. [Introduction to MariaDB](#introduction)
     1. [MariaDB Platform](#platform)
     2. [MariaDB SkySQL](#skysql)
-2. [Getting started](#get-started)
+3. [Getting started](#get-started)
     1. [Get the code](#code)
     2. [Create the schema](#schema)
     3. [Anatomy of the app](#app)
     4. [Build and run the app](#build-run)
-2. [Requirements to run the app](#requirements)
-3. [Support and contribution](#support-contribution)
-4. [License](#license)
+4. [Requirements to run the app](#requirements)
+5. [Support and contribution](#support-contribution)
+6. [License](#license)
 
-## Overview <a name="overview"></a>
+## Requirements <a name="requirements"></a>
+
+This sample application, no matter which API project you target, will requires the following to be installed/enabled on your machine:
+
+* [MariaDB Client](https://mariadb.com/products/skysql/docs/clients/), used to connect to MariaDB instances.
+
+## Introduction to MariaDB <a name="introduction"></a>
 
 ### MariaDB Platform <a name="platform"></a>
 
