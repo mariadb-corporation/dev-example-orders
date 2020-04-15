@@ -11,7 +11,7 @@ export default class Dashboard extends Component {
         
         // Default values
         this.state = {
-            showConnectionOptions: false,
+            showConnectionOptions: true,
             connection_id: 0,
             latest_read_count: 0,
             latest_write_count: 0,
@@ -107,11 +107,11 @@ export default class Dashboard extends Component {
     render() {
         return (
             <div className="form-main">
-                <div className={this.state.showConnectionOptions ? '' : 'hidden'}>
+                <div className={this.state.showConnectionOptions ? '' : 'visible'}>
                     <select onChange={this.onChangeConnectionOption}>
-                        <option value="0">Connection 1</option>
-                        <option value="1">Connection 2</option>
-                        <option value="2">Connection 3</option>
+                        <option value="0">InnoDB Engine</option>
+                        <option value="1">ColumnStore Engine</option>
+                        <option value="2">Aria Engine</option>
                     </select> 
                 </div>
                 <div className="form-content">
