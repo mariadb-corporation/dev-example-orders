@@ -81,11 +81,16 @@ $ mariadb --host host_address --port #### --user user_name -p**** < schema/creat
 or executing the SQL within (create.sql)(schema/create.sql) directly
 
 ```sql
-CREATE DATABASE orders;
+CREATE DATABASE orderstx;
+CREATE DATABASE ordersax;
 
-CREATE TABLE orders.orders (
+CREATE TABLE orderstx.orders (
   description varchar(25) 
 ) ENGINE=InnoDB;
+
+CREATE TABLE ordersax.orders (
+  description varchar(25) 
+) ENGINE=columnstore;
 ```
 
 ### Anatomy of the app <a name="app"></a>
