@@ -21,13 +21,14 @@ router.get("/", async (req, res, next) => {
 
         // Create 0-N read queries
         for (let i = 0; i < read_count; i++) {
-            reads += "select * from orders limit 1;";
+            reads += "select col9 from orders limit 10;";
         }
 
         // Create 0-N write queries
         let transaction_id = Date.now().toString();
         for (let i = 0; i < write_count; i++) {
-            writes += "insert into orders (description) values('order - " + transaction_id + "');";
+            //writes += "insert into orders (description) values('order - " + transaction_id + "');";
+            writes += "insert into orders (col0,col1,col2,col3,col4,col5,col6,col7,col8,col9) values('write count','" + write_count + "','order', 'test', 'value', 'need 4 more', 'eight', 'nine', 'ten', 'order - " + transaction_id + "');";
         }
 
         var promises = [];
