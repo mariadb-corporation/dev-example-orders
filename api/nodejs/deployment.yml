@@ -1,16 +1,16 @@
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: orders-api-deployment
+  name: engines-test-api-deployment
 spec:
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels: # labels to select/identify the deployment
-        app: orders-api  
+        app: engines-test-api  
     spec:     # pod spec                  
       containers: 
-      - name: orders-api 
-        image: gcr.io/mariadb-technical-marketing/orders-api-image:v1 # image we pushed
+      - name: engines-test-api 
+        image: gcr.io/mariadb-technical-marketing/engines-test-api-image:v1 # image we pushed
         ports:
-        - containerPort: 80
+        - containerPort: 8080

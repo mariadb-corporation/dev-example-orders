@@ -4,6 +4,9 @@ import DataFlowMetrics from './DataFlowMetrics';
 import DataFlowRealTimeDisplay from './DataFlowRealTimeDisplay';
 import TransactionLatencyRealTimeDisplay from './TransactionLatencyRealTimeDisplay';
 
+const apiUrl = 'http://34.94.248.53';
+//const apiUrl = 'http://35.235.97.65';
+
 export default class Dashboard extends Component {
 
     constructor(props) {
@@ -62,7 +65,7 @@ export default class Dashboard extends Component {
 
     async executeTransaction(read_count, write_count) {
         var { connection_id }  = this.state;
-        const response = await fetch('/api/orders?c=' + connection_id + '&r=' + read_count + "&w=" + write_count);
+        const response = await fetch(apiUrl + '/api/orders?c=' + connection_id + '&r=' + read_count + "&w=" + write_count);
         const body = await response.json();
         if (response.status !== 200) {
             throw Error(body.message) 
@@ -111,7 +114,8 @@ export default class Dashboard extends Component {
                     <select onChange={this.onChangeConnectionOption}>
                         <option value="0">InnoDB Engine</option>
                         <option value="1">ColumnStore Engine</option>
-                        <option value="2">Aria Engine</option>
+                        <option value="2">InnoDB Engine on big Table</option>
+                        <option value="3">ColumnStore Engine on big Table</option>
                     </select> 
                 </div>
                 <div className="form-content">
