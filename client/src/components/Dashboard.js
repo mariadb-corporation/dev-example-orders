@@ -6,6 +6,8 @@ import TransactionLatencyRealTimeDisplay from './TransactionLatencyRealTimeDispl
 
 export default class Dashboard extends Component {
 
+    default_query_count = 20;
+
     constructor(props) {
         super(props);
         
@@ -72,7 +74,7 @@ export default class Dashboard extends Component {
 
     getQueryCount() {
         var { traffic_multiplier, variation_percentage } = this.state.configuration;
-        var queries_base_count = 20 * traffic_multiplier;
+        var queries_base_count = this.default_query_count * traffic_multiplier;
         var min = queries_base_count - (queries_base_count * (variation_percentage/100)); 
         var max = queries_base_count + (queries_base_count * (variation_percentage/100));   
         return Math.floor(Math.random() * (+max - +min)) + +min; 
