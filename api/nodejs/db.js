@@ -14,24 +14,17 @@ var pools = [
     password: process.env.DB_PASS,
     port: process.env.DB_PORT,
     database: process.env.DB_NAME,
-    multipleStatements: true,
-    connectionLimit: 5,
-    /*
+    multipleStatements: true
+    /*,
     ssl: {
       ca: serverCert
     }*/
   })
 ];
 
-// Expose a method to establish connection with MariaDB SkySQL
+// Expose a method to establish connection 
 module.exports={
-  getConnection: function(config_id){
-    return new Promise(function(resolve,reject){
-      pools[config_id].getConnection().then(function(connection){
-        resolve(connection);
-      }).catch(function(error){
-        reject(error);
-      });
-    });
+  getConnection: async function(config_id) {
+    return pools[config_id].getConnection();
   }
 } 
