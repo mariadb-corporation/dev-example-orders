@@ -9,11 +9,11 @@ require('dotenv').config();
 // Create a connection pool
 var pools = [
   mariadb.createPool({
-    host: process.env.DB_HOST, 
-    user: process.env.DB_USER, 
-    password: process.env.DB_PASS,
-    port: process.env.DB_PORT,
-    database: process.env.DB_NAME,
+    host: process.env.DB_HOST_1, 
+    user: process.env.DB_USER_1, 
+    password: process.env.DB_PASS_1,
+    port: process.env.DB_PORT_1,
+    database: process.env.DB_NAME_1,
     multipleStatements: true
     /*,
     ssl: {
