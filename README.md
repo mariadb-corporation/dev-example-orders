@@ -1,5 +1,9 @@
 # Orders
 
+⚠️ **[UNMAINTAINED]** This repository has been moved and is currently maintained [here](https://github.com/mariadb-developers/orders-app-nodejs). ⚠️
+
+<br />
+
 **Orders** is a web application that introduces you to the power, performance, and simplicity of [MariaDB](https://mariadb.com/products/) by simulating online eCommerce (ordering) traffic.
 
 <p align="center" spacing="10">
