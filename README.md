@@ -14,10 +14,8 @@ This README will walk you through the steps for getting the Orders web applicati
 
 # Table of Contents
 1. [Requirements](#requirements)
-2. [Introduction to MariaDB](#introduction)
-    1. [MariaDB Platform](#platform)
-    2. [MariaDB SkySQL](#skysql)
-3. [Getting started](#get-started)
+2. [Getting started with MariaDB](#introduction)
+3. [Getting started with the app](#get-started)
     1. [Get the code](#code)
     2. [Create the schema](#schema)
     3. [Anatomy of the app](#app)
@@ -32,13 +30,13 @@ This sample application, no matter which API project you target, will requires t
 
 * [MariaDB Client](https://mariadb.com/products/skysql/docs/clients/), used to connect to MariaDB instances.
 
-## Introduction to MariaDB <a name="introduction"></a>
+## Getting started with MariaDB <a name="introduction"></a>
 
 [MariaDB](https://mariadb.com) is a community-developed, commercially supported relational database management system, and the database you'll be using for this application.
 
 If you don't have a MariaDB database up and running you can find more information on how to download, install and start using a MariaDB database in the [MariaDB Quickstart Guide](https://github.com/mariadb-developers/mariadb-getting-started).
 
-## Get started <a name="get-started"></a>
+## Get started with the app <a name="get-started"></a>
 
 In order to run the Orders application you will need to have a MariaDB instance to connect to. For more information please check out "[Get Started with MariaDB](https://mariadb.com/get-started-with-mariadb/)".
 
